@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="androidTEST.Views.MenuPage"
+             Title="MenuPage">
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False"></BackButtonBehavior>
+    </Shell.BackButtonBehavior>
+
+    <VerticalStackLayout>
+        <Label
+            Text="DeepLink"
+            FontSize="20"
+            TextColor="Yellow"
+            BackgroundColor="Blue"
+            IsVisible="{Binding IsDeepLink}"
+            Margin="10"
+            Padding="5"
+            HorizontalOptions="Start"
+            />
+        <Label
+            Text="{Binding LoginID}"
+            FontSize="20"
+            Margin="10"
+            HorizontalOptions="Start"
+            />
+        <Button
+            Text="CapturePhoto"
+            Command="{Binding PhotoCommand}"
+            Margin="10"
+            HorizontalOptions="Center"
+            />
+        <Image
+            Source="{Binding DisplayPhoto}"
+            Margin="10"
+            HorizontalOptions="Center"
+            />
+    </VerticalStackLayout>
+</ContentPage>
